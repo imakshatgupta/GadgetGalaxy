@@ -8,6 +8,7 @@ import Heading from "./components/Heading.js";
 import StarProduct from "./components/StarProduct.js";
 import HotAccessoriesMenu from "./components/HotAccessoriesMenu.js";
 import HotAccessories from "./components/HotAccessories.js";
+import ProductReviews  from "./components/ProductReviews.js" ;
 
 const data = require('./data/data.json');
 
@@ -30,7 +31,10 @@ function App() {
     <Route exact path="/lifestyle" element ={<HotAccessories lifeStyle={data.hotAccessories.lifeStyle} lifeStyleCover={data.hotAccessoriesCover.lifeStyle} />}/>
     <Route exact path="/mobileAccessories" element ={<HotAccessories mobileAccessories={data.hotAccessories.mobileAccessories} mobileAccessoriesCover={data.hotAccessoriesCover.mobileAccessories} />}/>
     </Routes> 
-       </BrowserRouter>
+    <Heading text ="PRODUCT REVIEWS"/>
+    <ProductReviews productReviews={data.productReviews}/>
+    </BrowserRouter>
+
   );
 }
 

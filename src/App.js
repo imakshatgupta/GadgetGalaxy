@@ -9,6 +9,9 @@ import StarProduct from "./components/StarProduct.js";
 import HotAccessoriesMenu from "./components/HotAccessoriesMenu.js";
 import HotAccessories from "./components/HotAccessories.js";
 import ProductReviews  from "./components/ProductReviews.js" ;
+import Videos from "./components/Videos.js"
+import Banner from "./components/Banner.js"
+import Footer from "./components/Footer.js"
 
 const data = require('./data/data.json');
 
@@ -33,6 +36,12 @@ function App() {
     </Routes> 
     <Heading text ="PRODUCT REVIEWS"/>
     <ProductReviews productReviews={data.productReviews}/>
+    <Heading text ="VIDEOS"/>
+    <Videos videos={data.videos}/>
+    <Heading text="IN THE PRESS"/>
+    <Banner banner={data.banner.end}/>
+    <Footer footer={data.footer}/>
+
     </BrowserRouter>
 
   );
